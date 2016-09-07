@@ -1,0 +1,7 @@
+template: Hello, %s!
+defaultName: world
+
+logging:
+  level: INFO
+  loggers:
+    com.example: DEBUG
