@@ -25,15 +25,10 @@ public class HelloWorldResource {
     }
 
     @GET
-    @Timed
     public Saying sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
+
         return new Saying(counter.incrementAndGet(), value);
     }
 
-    @POST
-    @Consumes(value = MediaType.APPLICATION_JSON)
-    public void askServer(@QueryParam("name") Optional<String> name) {
-        final String value = String.format(template, name.orElse(defaultName));
-    }
 }
