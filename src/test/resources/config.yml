@@ -5,3 +5,7 @@ logging:
   level: INFO
   loggers:
     com.example: DEBUG
+
+http:
+  port: 9080
+  adminPort: 9081
